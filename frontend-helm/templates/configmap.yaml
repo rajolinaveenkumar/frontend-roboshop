@@ -47,11 +47,11 @@ data:
             # Load configuration files for the default server block.
             include /etc/nginx/default.d/*.conf;
 
-          
-
           location /api/catalogue/ {
-              proxy_pass http://catalogue-svc:8080/;
+              proxy_pass http://catalogue-svc:8080/; # NOTE: ACTUALLY IT SHOULD BE ONLY BACKEND BUT I CHANGED TO BACKEND-SVC TO WORK K8 DEPLOYMENT. ITS SERVICE TO SERVICE COMMUNICATION.
           }
+
+          
 
             # The below is for HOST NETWORK
           # location /api/ {
