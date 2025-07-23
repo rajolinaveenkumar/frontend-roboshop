@@ -16,11 +16,12 @@ spec:
       code: frontend-roboshop-dev
   template:
     metadata:
-      project: roboshop
-      component: frontendroboshop
-      environment: dev
-      tier: frontend
-      code: frontend-roboshop-dev
+      labels:
+        project: roboshop
+        component: frontendroboshop
+        environment: dev
+        tier: frontend
+        code: frontend-roboshop-dev
     spec:
       volumes:
       - name: nginx-conf
